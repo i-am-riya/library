@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Library</div>
+        <button class="openModal" id="new-book-btn">
+            <span class="plus-sign">+</span> Add Books
+        </button>
+
+    </nav>
+    <main>
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Add a New Book</h2>
+                    <!-- <span class="close" id="closeModal">&times;</span> -->
+                </div>
+                <div class="modal-body">
+                    <form id="bookForm">
+                        <div class="mb-3">
+                            <label for="bookTitle" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="bookTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookAuthor" class="form-label">Author</label>
+                            <input type="text" class="form-control" id="bookAuthor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookPages" class="form-label">Pages</label>
+                            <input type="number" class="form-control" id="bookPages" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="checkbox"  id="bookRead">
+                            <label for="bookRead" >Read</label>
+                        </div>
+                        <button type="submit" class="btn">Add Book</button>
+                        <div type="" class="close btn-cancel">Cancel</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="library" class="card-container"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
